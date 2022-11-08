@@ -22,7 +22,7 @@ def main():
     time = datetime.datetime.fromtimestamp(epoch)
     locator_resp= rg.search((lat, lon))
     city= locator_resp[0]["name"]
-    country= locator_resp[0]["cc"]
+    country= locator_resp[0]["admin1"]
 
     print(f"""
     CURRENT LOCATION OF THE ISS:
