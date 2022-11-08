@@ -21,11 +21,11 @@ def main():
     if resp.status_code == 200:
         # convert the JSON content of the response into a python dictionary
         vader= resp.json()
-        print(vader,"\n")
+        print(resp.json()["name"] + "was born in the year " + resp.json()["birth_year"],"\n")
         pprint(vader)
 
     else:
-        print("That is not a valid URL.")
+        print("That is not a valid URL.", resp.reason)
 
 if __name__ == "__main__":
     main()
