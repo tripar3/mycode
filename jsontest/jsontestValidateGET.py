@@ -17,7 +17,8 @@ def main():
     #jsonToValidate = f"json={ str(mydata).replace(' ', '') }"
     ## slightly different thinking
     ## user json library to convert to legal json, then strip out whitespace
-    jsonToValidate = f"json={ json.dumps(mydata).replace(' ', '') }"
+    #jsonToValidate = f"json={ json.dumps(mydata).replace(' ', '') }"
+    jsonToValidate = f"json={ json.dumps(mydata) }"
     
     print("jsonToValidate = " + jsonToValidate,"\n")
     # use requests library to send an HTTP GET
