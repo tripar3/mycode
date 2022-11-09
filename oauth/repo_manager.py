@@ -4,7 +4,7 @@
 import json
 import requests
 
-MY_USERNAME = ""  # Make sure you put your own username in here!
+MY_USERNAME = "tripar3"  # Make sure you put your own username in here!
 
 def create_repo(repo_name: str, token: str) -> str:
     """
@@ -43,7 +43,7 @@ def get_token() -> str:
 
 if __name__ == "__main__":
     tkn = get_token()
-    show_repos("tripar3", tkn)
+    show_repos(MY_USERNAME, tkn)
     create_repo("learning_oauth", tkn)
 
 
