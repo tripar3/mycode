@@ -48,6 +48,7 @@ def main():
     ## create an integer from a float timestamp (for our RAND)
     print("time = ", time.time())
     rand = str(time.time()).rstrip('.')
+    print("rand = ", rand)
 
     ## build hash with hashbuilder(timestamp, privatekey, publickey)
     keyhash = hashbuilder(rand, privkey, pubkey)
