@@ -19,7 +19,7 @@ def main():
         # verify if the URL parsed is valid or not
         print("Response code is " + str(resp.status_code) + ". It is valid URL.", "\n")
         # convert the JSON content of the response into a python dictionary
-        res= resp.json()
+
         # check if the character exists
         if resp.json()["name"]:
             # check if the actor's name is found
