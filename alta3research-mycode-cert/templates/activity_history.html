@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACTIVITY HISTORY</title>
+</head>
+<body>
+<div class="main">
+    <h2>Activity History</h2>
+
+    <table cellpadding="10px">
+        <tr class="centered-text">
+            <th>Name</th>
+            <th>Date</th>
+            <th>Steps</th>
+            <th>Calories</th>
+        </tr>
+        {% for row in cur.execute("SELECT * from activity") %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<h1>Activity Tracker</h1>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACTIVITY TRACKER</title>
+</head>
+<body>
+<div class="main">
+    <form method="POST" action="/">
+        Name:<br>
+        <input type="text" name="name"><br>
+        Date:<br>
+        <input type="date" name="date"><br>
+        Steps:<br>
+        <input type="text" name="steps"><br>
+        Calories Burned:<br>
+        <input type="text" name="calories"><br><br>
+        <input type="submit" value="Save"><br><br><br>
+    </form>
+</div>
+
+<br>
+
+<div class="main">
+    <a href="/activity_history"><button>Activity History</button></a>
+</div>
+</body>
+</html>
