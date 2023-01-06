@@ -48,12 +48,12 @@ def index():
             cur.execute("INSERT INTO activity VALUES(?,?,?,?)", info)
             # Commit the transaction
             con.commit()
+            msg = "Record successfully added"
 
     except:
         con.rollback()
         msg = "Insert failed"
     finally:
-        msg = "Record successfully added"
         return render_template('activity_tracker.html', msg=msg)
 
 @app.route('/activity_history')
